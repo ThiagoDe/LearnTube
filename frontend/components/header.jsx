@@ -6,16 +6,17 @@ import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar';
+// import learnLogo from '../../app/assets/images/learn_logo'
 
 function Header () {
     return (
         <div className='header'>
           <div className="header__left">
             <MenuIcon />
-            <Link to='/'> LearnTube
-                <span className='header__logo' ></span>
-              {/* <img 
-                src='https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg'
+            <Link to='/'> 
+                {/* <span className='header__logo' ></span> */}
+              {/* <img className='header__logo'
+                src={learnLogo}
                 alt=''
               /> */}
             </Link>
