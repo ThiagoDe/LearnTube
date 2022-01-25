@@ -1,9 +1,6 @@
 class Api::SessionsController < ApplicationController
     before_action :require_signed_in!, only: [:destroy]
 
-    def new
-        render :new
-    end
 
     def create
         @user = User.find_by_credentials(
@@ -23,8 +20,7 @@ class Api::SessionsController < ApplicationController
     def destroy
         if current_user
             sign_out!
-            redirect_to new_session_url
-            # or render json: { message: 'Logout successful'}
+            render json: { message: 'Logout successful'}
         else
             render json: { error: "You must Login first."}, status: 404
         end

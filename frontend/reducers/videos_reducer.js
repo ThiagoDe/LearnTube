@@ -6,7 +6,7 @@ const videosReducer = (oldState = {}, action) => {
    
     switch (action.type) {
         case RECEIVE_ALL_VIDEOS:
-            return action.videos;
+            return Object.assign({}, action.videos);
         case RECEIVE_VIDEO:
             nextState[action.video.id]= action.video;
             return nextState;

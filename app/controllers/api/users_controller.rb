@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-    before_action :require_signed_in!, only: [:edit, :update, :destroy, :index, :show]
+    # before_action :require_signed_in!, only: [:edit, :update, :destroy, :index, :show]
     #not sure if is need it, also how deal with it on the front
 
     def index

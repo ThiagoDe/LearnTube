@@ -17,13 +17,13 @@ const logoutCurrentUser = () => {
 }
 
 // thunks
-export const signup = user => dispatch => (
-    APIUtil.signup(user)
+export const signupUser = formUser => dispatch => (
+    APIUtil.signup(formUser)
         .then( user => dispatch(receiveCurrentUser(user)))
 )
 
-export const login = user => dispatch => (
-    APIUtil.login(user)
+export const login = formUser => dispatch => (
+    APIUtil.login(formUser)
         .then( user => dispatch(receiveCurrentUser(user)))
 )
 

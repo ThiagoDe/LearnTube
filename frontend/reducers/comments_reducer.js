@@ -5,7 +5,7 @@ const commentsReducer = (oldState ={}, action) => {
     let nextState = Object.assign({}, oldState);
     switch (action.type) {
         case RECEIVE_ALL_COMMENTS:
-            return action.comments;
+            return Object.assign({}, action.comments)
         case RECEIVED_COMMENT:
             nextState[action.comment.id]= action.comment;
             return nextState;
