@@ -7,17 +7,23 @@ const Greeting = ({ currentUser, logout }) => {
       <div>
           {/* <h1>with currentUser test greetings </h1> */}
         <p>Welcome, {currentUser.username} !</p>
-        <button onClick={ logout }>Sign out</button>
+        <button type="submit" onClick={ logout }>Sign out</button>
       </div>
     );
   }
 
   return (
-    <div>
+    <div  class="inputBox">
         <h1></h1>
-      <Link to='/signup'>Sign Up</Link>
+      <Link to='/signup'>
+        <button type="submit" >Sign Up</button>
+      </Link>
       <br/>
-      <Link to={'/signin'}>Sign In</Link>
+      <br/>
+      <br/>
+      <Link to={'/signin'}>
+        <button type="submit" >Sign In</button>
+      </Link>
     </div>
   );
 };

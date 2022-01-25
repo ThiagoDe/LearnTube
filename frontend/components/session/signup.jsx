@@ -24,20 +24,27 @@ class Signup extends React.Component {
 
     render() {
         return (
-            <div className='session-form'>
-                <h2>Sign up!</h2>
-                <form>
-                    <label>Username
-                        <input type="text"
-                         value={this.state.username}
-                         onChange={this.handleInput('username')} />
-                    </label>
-                    <label>Password 
-                        <input type="password"
-                         value={this.state.password}
-                         onChange={this.handleInput('password')} />
-                    </label>
-                    <button onClick={this.handleSubmit}>Sign Up</button>
+            
+            <div class="box">
+                <h2>Sign Up</h2>
+                <br/>
+
+                 <form>
+                    <div class="inputBox">
+                            <input type="text"
+                            value={this.state.username}
+                            onChange={this.handleInput('username')} />
+                            <label>Username</label>
+                    </div>
+
+                    <div class="inputBox">
+                            <input type="password"
+                            value={this.state.password}
+                            onChange={this.handleInput('password')} />
+                            <label>Password </label>
+                    </div>
+
+                    <button type="submit" onClick={this.handleSubmit}>Sign Up</button>
                 </form>
             </div>
         )
