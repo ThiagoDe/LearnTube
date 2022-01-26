@@ -13,8 +13,8 @@ const Greeting = ({ currentUser, logout }) => {
   }
 
   return (
-    <div  class="inputBox">
-        <h1></h1>
+    <div  className="inputBox">
+        {/* <h1></h1>
       <Link to='/signup'>
         <button type="submit" >Sign Up</button>
       </Link>
@@ -23,7 +23,7 @@ const Greeting = ({ currentUser, logout }) => {
       <br/>
       <Link to={'/signin'}>
         <button type="submit" >Sign In</button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

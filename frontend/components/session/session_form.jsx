@@ -27,14 +27,14 @@ class SessionForm extends React.Component {
         
         return (
                     
-            <div class="box">
+            <div className="box">
                 
                 <h2>{this.props.formType}</h2>
                 <p>Use your Google Account</p>
 
 
                     <form onSubmit={this.handleSubmit}>
-                        <div class="inputBox">
+                        <div className="inputBox">
                            
                                 <input
                                     type="text"
@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
                           <label>Username</label>
                         </div>
 
-                        <div class="inputBox">
+                        <div className="inputBox">
                                 <input
                                     type="password"
                                     name="text"
@@ -54,6 +54,11 @@ class SessionForm extends React.Component {
                                 </input>
                             <label> Password </label>
                         </div>
+
+                        <Link to='/signup' >
+                        <p>Create an account</p>
+                        </Link>
+                        
                             <button type="submit">{this.props.formType}</button>
                     </form>
             </div>

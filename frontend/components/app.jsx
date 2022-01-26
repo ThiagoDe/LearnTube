@@ -7,12 +7,13 @@ import SigninContainer from './session/signin_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_utils'
 import Header from './header'
 import Home from './home';
+import SideBar from './sidebar/sidebar'
 
 const App = () => (
     <div>
        
         <Header/>
-        
+        <SideBar/> 
         <Switch>
         <Route exact path="/" component={Home} />
         <AuthRoute exact path="/signup" component={SignupContainer}/>

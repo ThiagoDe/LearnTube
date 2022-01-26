@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from 'react-router-dom';
 class Signup extends React.Component {
     constructor(props){
         super(props)
@@ -25,24 +25,27 @@ class Signup extends React.Component {
     render() {
         return (
             
-            <div class="box">
+            <div className="box">
                 <h2>Sign Up</h2>
                 <br/>
 
                  <form>
-                    <div class="inputBox">
+                    <div className="inputBox">
                             <input type="text"
                             value={this.state.username}
                             onChange={this.handleInput('username')} />
                             <label>Username</label>
                     </div>
 
-                    <div class="inputBox">
+                    <div className="inputBox">
                             <input type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')} />
                             <label>Password </label>
                     </div>
+                    <Link to='/signin' >
+                        <p>Already have an account?</p>
+                    </Link>
 
                     <button type="submit" onClick={this.handleSubmit}>Sign Up</button>
                 </form>

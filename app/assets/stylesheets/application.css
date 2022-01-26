@@ -25,9 +25,15 @@
 }
 
 .header__logo {
-    height: 25px;
+    height: 30px;
+    object-fit: contain;
+    margin-left: 20px;
+}
+.header__signin {
+    height: 35px;
     object-fit: contain;
     margin-left: 10px;
+    margin-right: 15px;
 }
 
 .header__center {
@@ -58,7 +64,7 @@
     flex: 1;
 }
 
-/* forms */
+/* forms login logout */
 
 body {
     margin: 0;
@@ -144,6 +150,7 @@ body {
     outline: none;
     border: 2px solid #1a73e8;
 }
+/* changed input to button to have the same style  */
 .box button[type="submit"] {
     border: none;
     outline: none;
@@ -178,3 +185,65 @@ body {
     outline: none;
     border: 2px solid #1a73e8;
 }
+
+
+
+/* sidebar row left */
+.sidebarrow {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sidebarrow__icon {
+    color: #606060;
+    font-size: large !important;
+}
+
+.sidebarrow__title {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sidebarrow:hover {
+    background-color: lightgray;
+    cursor: pointer
+}
+
+.sidebarrow:hover >.sidebarrow__icon {
+    color: red
+}
+
+.sidebarrow:hover >.sidebarrow__title {
+    font-weight: bold;
+}
+
+.sidebarrow.selected {
+    background-color: lightgray;
+}
+
+.sidebarrow.selected >.sidebarrow__icon {
+    color: red
+}
+
+.sidebarrow.selected >.sidebarrow__title {
+    font-weight: bold;
+}
+
+/* finaly the sidebar  */
+.sidebar {
+    /* flex: 0.2 */
+    /* flex-grow: 10; */
+    width: 20%;
+
+} 
+
+.sidebar > hr {
+    height: 1px;
+    border: 0;
+    background-color: rgb(211, 211, 211);
+    margin-top: 10px;
+    margin-bottom: 10px;
+} 
