@@ -1,3 +1,76 @@
 // Place all the styles related to the api/videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// .recommendedVideos {
+//     flex: 0.8;
+//     background-color: #f9f9f9;
+//     padding: 40px 20px;
+//     padding-bottom: 0;
+// }
+// .recommendedVideos > h2 {
+//    margin-left: 5px ;
+//    margin-bottom: 20px ;
+// }
+
+.recommendedVideos {
+    flex: 0.8;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    padding-bottom: 0;
+}
+
+.recommendedVideos > h2 {
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.recommendedVideos__videos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recommendedVideos__videos > * {
+    margin-left: 5%;
+}
+
+
+
+
+.videoCard {
+    width: 270px;
+    margin-bottom: 40px;
+}
+
+.videoCard__image {
+    height: 140px;
+    width: 250px;
+}
+
+.videoCard__info {
+    display: flex;
+    margin-top: 10px;
+    padding-right: 30px;
+}
+
+.videoCard__text {
+    margin-left: 15px;
+}
+
+.videoCard__text > h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.videoCard__text > p {
+    font-size: 14px;
+    color: gray;
+}
+
+.videoCard__avatar {
+    height: 30px !important;
+    width: 30px !important;
+}
+
+.videoCard__text > * {
+    margin: 1px;
+}

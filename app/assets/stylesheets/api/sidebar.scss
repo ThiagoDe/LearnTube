@@ -1,0 +1,57 @@
+/* sidebar row left */
+.sidebarrow {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sidebarrow__icon {
+    color: #606060;
+    font-size: large !important;
+}
+
+.sidebarrow__title {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sidebarrow:hover {
+    background-color: lightgray;
+    cursor: pointer
+}
+
+.sidebarrow:hover >.sidebarrow__icon {
+    color: red
+}
+
+.sidebarrow:hover >.sidebarrow__title {
+    font-weight: bold;
+}
+
+.sidebarrow.selected {
+    background-color: lightgray;
+}
+
+.sidebarrow.selected >.sidebarrow__icon {
+    color: red
+}
+
+.sidebarrow.selected >.sidebarrow__title {
+    font-weight: bold;
+}
+
+/* finaly the sidebar  */
+.sidebar {
+   flex: 0.2
+ 
+}
+
+.sidebar > hr {
+    height: 1px;
+    border: 0;
+    background-color: rgb(211, 211, 211);
+    margin-top: 10px;
+    margin-bottom: 10px;
+} 

@@ -8,14 +8,19 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils'
 import Header from './header'
 import Home from './home';
 import SideBar from './sidebar/sidebar'
+import RecommendedVideos from './videos/recommended_videos'
 
 const App = () => (
-    <div>
+    <div className="app">
        
         <Header/>
-        <SideBar/> 
+        <div className='app__page'>
+            <SideBar/> 
+            <RecommendedVideos/>
+        </div>
+
         <Switch>
-        <Route exact path="/" component={Home} />
+        {/* <Route exact path="/" component={Home} /> */}
         <AuthRoute exact path="/signup" component={SignupContainer}/>
         <AuthRoute exact path="/signin" component={SigninContainer}/>
 

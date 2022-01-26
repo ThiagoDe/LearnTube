@@ -11,7 +11,10 @@ function Header () {
     return (
         <div className='header'>
           <div className="header__left">
-            <MenuIcon />
+
+            <MenuIcon className='hamburger__menu'/>
+
+
             <Link to='/'> 
               <img className='header__logo'
                 src={ window.logoURL}
@@ -21,7 +24,7 @@ function Header () {
           </div>
           
           <div className="header__center">
-            <input type='text'/>
+            <input type='text' placeholder="Search"/>
             <SearchIcon className='header__searchbutton'/>
           </div>
 
