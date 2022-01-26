@@ -6,6 +6,7 @@ import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar';
+import FileUploadIcon from '@mui/icons-material/FileUpload';
 
 function Header () {
     return (
@@ -24,14 +25,12 @@ function Header () {
           </div>
           
           <div className="header__center">
-            <input type='text' placeholder="Search"/>
+            <input type='text' placeholder="Search and Learn"/>
             <SearchIcon className='header__searchbutton'/>
           </div>
 
           <div className="header__right">
-            <VideoCallIcon className='header__icon'/>
-            <AppsIcon className='header__icon'/>
-            {/* <NotificationsIcon className='header__icon'/> */}
+            <FileUploadIcon className='header__icon'/>
            
             <Link to='/signin'>
                <img className='header__signin'
