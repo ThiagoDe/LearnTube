@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-	context: __dirname,
+	// context: __dirname,
 	entry: './frontend/learn_tube.jsx',
 	output: {
 		path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
