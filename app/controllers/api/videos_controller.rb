@@ -8,6 +8,7 @@ class Api::VideosController < ApplicationController
 
     def show
         @video = Video.find_by(id: params[:id])
+        # debugger
         if @video
             render :show
         else
@@ -48,6 +49,6 @@ class Api::VideosController < ApplicationController
     private 
 
     def video_params
-        params.require(:video).permit(:title, :description, :views, :user_id)
+        params.require(:video).permit(:title, :description, :views, :user_id, :thumbnail)
     end
 end
