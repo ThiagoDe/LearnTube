@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GreetingContainer from './session/greeting_container'
 // import MenuIcon from '@material-ui/icons/Menu';
 // import SearchIcon from '@material-ui/icons/Search';
 
@@ -12,7 +13,13 @@ function Header () {
           <div className="header__left">
 
             {/* <MenuIcon className='hamburger__menu'/> */}
-
+ 
+            <Link to='/'> 
+              <img className='header__hamburger'
+                src={window.hamburger}
+                alt=''
+              />
+            </Link> 
 
             <Link to='/'> 
               <img className='header__logo'
@@ -20,6 +27,7 @@ function Header () {
                 alt=''
               />
             </Link>
+           
           </div>
           
           <div className="header__center">
@@ -29,6 +37,9 @@ function Header () {
 
           <div className="header__right">
             {/* <FileUploadIcon className='header__icon'/> */}
+            
+            {/* change the greeting to the modal */}
+             <GreetingContainer className='header__icon'/>
            
             <Link to='/signin'>
                <img className='header__signin'

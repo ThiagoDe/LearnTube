@@ -8,8 +8,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils'
 import Header from './header'
 import Home from './home';
 import SideBar from './sidebar/sidebar'
-import RecommendedVideos from './videos/recommended_videos'
-// import VideoShow from './videos/video_show'
+import RecommendedVideosContainer from './videos/recommended_videos_container'
+import VideoShow from './videos/video_show'
 import VideoShowContainer from './videos/video_show_container';
 
 const App = () => (
@@ -18,17 +18,17 @@ const App = () => (
         <Header/>
         <div className='app__page'>
             <SideBar/> 
-            <RecommendedVideos/>
-            {/* <VideoShow/> */}
-        </div>
+            <VideoShow/>
+        
 
-        <Switch>
-        {/* <Route exact path="/" component={Home} /> */}
-        <AuthRoute exact path="/signup" component={SignupContainer}/>
-        <AuthRoute exact path="/signin" component={SigninContainer}/>
-        <AuthRoute exact path="/videos/:videoId" component={VideoShowContainer}/>
+            <Switch>
+            <Route exact path="/" component={RecommendedVideosContainer} />
+            <AuthRoute exact path="/signup" component={SignupContainer}/>
+            <AuthRoute exact path="/signin" component={SigninContainer}/>
+            <AuthRoute exact path="/videos/:videoId" component={VideoShowContainer}/>
 
         </Switch>
+        </div>
     </div>
 )
 export default App 

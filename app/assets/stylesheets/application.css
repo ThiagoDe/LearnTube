@@ -30,6 +30,11 @@
     object-fit: contain;
     margin-left: 25px;
 }
+.header__hamburger {
+    height: 32px;
+    object-fit: contain;
+    margin-left: 25px;
+}
 .header__signin {
     height: 35px;
     object-fit: contain;

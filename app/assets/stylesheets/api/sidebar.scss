@@ -3,11 +3,16 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    width: 200px;
+    height: 30px;
+    // background-color: white;
 }
 
 .sidebarrow__icon {
     color: #606060;
     font-size: large !important;
+    height: 100%;
+
 }
 
 .sidebarrow__title {

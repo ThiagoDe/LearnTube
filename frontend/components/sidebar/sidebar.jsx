@@ -11,20 +11,24 @@ import SideBarRow from './sidebar_row';
 
 const SideBar = () => {
 
-
     return (
         
             <div className='sidebar'>
-                {/* <SideBarRow selected Icon={HomeIcon} title='Home' />
-                <SideBarRow Icon={LinkedInIcon} title='Linkedin' />
-                <SideBarRow Icon={GitHubIcon} title='GitHub' />
-                {/* this can be where */}
+               
+                <SideBarRow selected icon={ window.home} title='Home' />
+                {/* <SideBarRow selected title='Home' /> */}
+                <SideBarRow icon={window.linkedin} title='Linkedin' />
                 <hr />
-                {/* switch a linkdin link */}
-                {/* <SideBarRow Icon={HistoryIcon} title='History' />
-                <SideBarRow Icon={OndemandVideoIcon} title='Your videos' />
-                <SideBarRow Icon={ThumbUpIcon} title='Liked vides' />  */}
+                <SideBarRow icon={window.git} title='GitHub' />
+              
+              
+                {/* <SideBarRow Icon={HistoryIcon} title='History' /> */}
+                {/* <SideBarRow Icon={OndemandVideoIcon} title='Your videos' /> */}
+                {/* <SideBarRow Icon={ThumbUpIcon} title='Liked vides' />  */}
                 <hr />
+                
+                
+
             </div>
         
     )
