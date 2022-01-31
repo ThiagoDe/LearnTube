@@ -59,6 +59,10 @@
 .videoCard__text > h4 {
     font-size: 14px;
     margin-bottom: 5px;
+    color: rgb(24, 22, 22);
+}
+.videoCard__text > h4:visited {
+    text-decoration: none;
 }
 
 .videoCard__text > p {
@@ -73,4 +77,38 @@
 
 .videoCard__text > * {
     margin: 1px;
+}
+.link__video {
+    text-decoration: none;
+}
+.link__video:visited {
+    text-decoration: none;
+}
+
+
+
+.videoinfo {
+    margin: 3% 0% 0% 0%;
+}
+.videoinfo__headline {
+    font-family: Arial, Helvetica, sans-serif;
+    h1 {
+        font-weight: normal;
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+
+.videoinfo {
+    flex-direction: row;
+}
+
+.videoinfo__channeltitle {
+    font-size: small;
+}
+
+.videoinfo__channeldesc {
+    color: rgb(59, 58, 58);
+    font-size: small;
 }

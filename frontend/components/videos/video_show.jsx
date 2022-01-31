@@ -1,5 +1,5 @@
 import React from 'react';
-// import ReactPlayer from 'react-player'
+import VideoInfo from './video_info'
 class VideoShow extends React.Component {
     constructor(props) {
         super(props);
@@ -12,16 +12,23 @@ class VideoShow extends React.Component {
     }
 
     render() {
-        if (!this.props.video) { return null}
-        console.log(this.props.video.uploaded_video)
+        const { video } = this.props
+
+        if (!video) { return null}
+        // console.log(video.uploaded_video)
         return(
             <div>
-                <h1>{this.props.video.title}</h1>
-                {/* <img src={this.props.video.thumbnail}></img> */}
-
-            <video width="320" height="240" controls>
-             <source src={this.props.video.videoUrl} type="video/mp4"></source>
+            <video width="640" height="390" controls>
+             <source src={video.videoUrl} type="video/mp4"></source>
             </video>
+
+            <VideoInfo 
+                title={video.title}
+                description={video.description}
+                created_at={video.created_at}
+                views={`76k`}
+                channelTitle={`The learner`}
+            />
 
             </div>
         )
