@@ -15,7 +15,13 @@
 .recommendedVideos {
     flex: 0.8;
     background-color: #f9f9f9;
-    padding: 40px 20px;
+    padding: 30px 10px;
+    padding-bottom: 0;
+}
+.video__show {
+    flex: 0.8;
+    background-color: #f9f9f9;
+    padding: 30px 10px;
     padding-bottom: 0;
 }
 
@@ -38,7 +44,7 @@
 
 .videoCard {
     width: 270px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .videoCard__image {
@@ -91,7 +97,7 @@
     margin: 3% 0% 0% 0%;
 }
 .videoinfo__headline {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     h1 {
         font-weight: normal;
         margin: 0;
@@ -112,3 +118,4 @@
     color: rgb(59, 58, 58);
     font-size: small;
 }
+

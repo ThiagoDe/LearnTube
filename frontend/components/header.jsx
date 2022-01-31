@@ -1,25 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GreetingContainer from './session/greeting_container'
-// import MenuIcon from '@material-ui/icons/Menu';
-// import SearchIcon from '@material-ui/icons/Search';
 
-// import Avatar from '@material-ui/core/Avatar';
-// import FileUploadIcon from '@mui/icons-material/FileUpload';
 
-function Header () {
+class Header extends React.Component {
+
+  handleToggle() {
+   const button = document.querySelector('.sidebar')
+    button.classList.toggle('active')
+  }
+
+    render() {
     return (
+
         <div className='header'>
           <div className="header__left">
 
-            {/* <MenuIcon className='hamburger__menu'/> */}
- 
-            <Link to='/'> 
+            <button type="button" className="button_icon_burger" 
+                onClick={ this.handleToggle}>
               <img className='header__hamburger'
                 src={window.hamburger}
                 alt=''
               />
-            </Link> 
+            </button>
 
             <Link to='/'> 
               <img className='header__logo'
@@ -31,7 +34,11 @@ function Header () {
           </div>
           
           <div className="header__center">
-            <input type='text' placeholder="Search and Learn"/>
+            <input className="header__searchbutton" type='text' placeholder="Search and Learn" />
+              <img className='header__search__icon'
+                src={window.search}
+                alt=''
+              />
             {/* <SearchIcon className='header__searchbutton'/> */}
           </div>
 
@@ -58,6 +65,7 @@ function Header () {
           </div>
         </div>
     )
+    }
 }
 
 export default Header;

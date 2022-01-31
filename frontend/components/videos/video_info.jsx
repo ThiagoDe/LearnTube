@@ -6,6 +6,9 @@ const VideoInfo = ({title, description, created_at, channelTitle, views}) => {
         <div className='videoinfo'>
             <div className='videoinfo__headline'>
                 <h1>{title}</h1>
+
+            {/*  */}
+
             </div>
 
             <div className='videoinfo__stats'>

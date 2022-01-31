@@ -6,8 +6,8 @@ const SideBar = () => {
 
     return (
         
-            <div className='sidebar'>
-               
+            <div className='sidebar' >
+               <div >
                 <SideBarRow selected icon={ window.home} title='Home' />
                 <SideBarRow icon={window.linkedin} title='Linkedin' />
                 {/* <hr /> */}
@@ -19,7 +19,7 @@ const SideBar = () => {
                 {/* <SideBarRow Icon={ThumbUpIcon} title='Liked vides' />  */}
                 <hr />
                 
-                
+                </div>
 
             </div>
         

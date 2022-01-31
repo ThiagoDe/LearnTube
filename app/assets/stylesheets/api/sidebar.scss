@@ -47,11 +47,25 @@
     font-weight: bold;
 }
 
-/* finaly the sidebar  */
 .sidebar {
-   flex: 0.2
- 
+    flex: 0.2;
+    display: none;     
+    // display: block;     
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    overflow: auto; 
+    transform: 500ms;
 }
+.sidebar.active {
+    display: block;
+    flex: 0.2;  
+    // left: 0;
+    // top: 0;
+    z-index: 1; 
+}
+
+
 
 .sidebar > hr {
     height: 1px;
@@ -60,3 +74,16 @@
     margin-top: 10px;
     margin-bottom: 10px;
 } 
+
+.button_icon_burger {
+    border: none;
+    border-color: white;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: -10%;
+}
+
+// .button_icon_burger:focus {     
+//     background-color:rgb(211, 211, 211);    
+// }
+

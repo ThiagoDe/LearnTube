@@ -17,10 +17,12 @@ class VideoShow extends React.Component {
         if (!video) { return null}
         // console.log(video.uploaded_video)
         return(
-            <div>
+            <div className="video__show">
             <video width="640" height="390" controls>
              <source src={video.videoUrl} type="video/mp4"></source>
             </video>
+
+            
 
             <VideoInfo 
                 title={video.title}
