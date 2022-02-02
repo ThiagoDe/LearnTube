@@ -1,5 +1,7 @@
 import React from 'react';
 import LikesContainer from './likes_container';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 
 const VideoInfo = ({title, description, created_at, channelTitle, views, video}) => {
 
@@ -22,18 +24,18 @@ const VideoInfo = ({title, description, created_at, channelTitle, views, video})
             </div>
             <hr />
             <div className="videoinfo__channel">
-                <div>
-                   
+                {/* <div> */}
+                        <FontAwesomeIcon icon={faUserCircle} className="user__cicle"/>
                     <div className='videoinfo__channelinfo'>
                         <h3 className='videoinfo__channeltitle'>{channelTitle}</h3>
                     </div>
-                    {/* add like button */}
-                </div>
+                {/* </div> */}
                
             </div>
             <div className='videoinfo__channeldesc'>
                 <p>{description}</p>
             </div>
+            <hr/>
         </div>
     )
 }

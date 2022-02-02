@@ -97,6 +97,7 @@
 
 .videoinfo {
     margin: 3% 0% 0% 0%;
+    
 }
 .videoinfo__headline {
     display: flex;
@@ -111,11 +112,13 @@
 .videoinfo__stats {
     display: flex;
     justify-content: start;
+    color: gray;
 }
 .likes {
     // display: flex;
     margin-left: 40px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    color:black;
 }
 .thumbs__up {
     height: 20px;
@@ -138,8 +141,18 @@
 
 .videoinfo__channeltitle {
     font-size: small;
+    margin-left: 20px;
 }
-
+.videoinfo__channel {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.user__cicle{
+    height: inherit;
+    color: rgb(59, 58, 58);
+    font-size: 30px;
+}
 .videoinfo__channeldesc {
     color: rgb(59, 58, 58);
     font-size: small;

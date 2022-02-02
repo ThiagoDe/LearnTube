@@ -15,20 +15,25 @@ class VideoShow extends React.Component {
         if (!this.props.match) { return null}
         this.props.fetchVideo(this.props.match.params.videoId);
     }
+    
+    componentDidUpdate(prevProp) {
 
+        if(this.props.match.params.videoId !== prevProp.match.params.videoId){
+           this.props.fetchVideo(this.props.match.params.videoId);
+        // (this.props.video).load()
+        }
+    }
     render() {
         const { video, videos } = this.props
-
         if (!video) { return null}
-        // console.log(RecommendedVideosContainer)
 
         return(
             <div className="video__show">
 
-                <video id="video__frame" controls>
+                {/* <video id="video__frame" controls autoPlay>
                     <source src={video.videoUrl} type="video/mp4"></source>
-                </video>
-
+                </video> */}
+                <video id='video__frame' src={video.videoUrl}  controls autoPlay/>
             
 
             <VideoInfo 

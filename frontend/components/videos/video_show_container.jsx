@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
     // debugger
     return({
         video: state.entities.videos[ownProps.match.params.videoId],
-        videos: Object.values(state.entities.videos)
+        // videos: Object.values(state.entities.videos)
     })
 }
 
