@@ -66,7 +66,10 @@
     /* color: gray; */
     cursor: pointer;
 }
-
+input {
+    border: 0;
+    -webkit-appearance: none
+}
 .header__right {
     display: flex;
     align-items: center;

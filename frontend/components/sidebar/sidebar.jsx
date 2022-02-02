@@ -1,5 +1,6 @@
 import React from 'react';
 import SideBarRow from './sidebar_row';
+import { Link } from 'react-router-dom';
 
 
 const SideBar = () => {
@@ -8,10 +9,11 @@ const SideBar = () => {
         
             <div className='sidebar' >
                <div >
-                <SideBarRow selected icon={ window.home} title='Home' />
-                <SideBarRow icon={window.linkedin} title='Linkedin' />
+                 <Link to='/'><SideBarRow selected icon={ window.home} title='Home' /></Link>
+
+                <a href="https://www.linkedin.com/in/thiago-miglioranzi/" target="_blank"><SideBarRow icon={window.linkedin} title='Linkedin' /></a>
                 {/* <hr /> */}
-                <SideBarRow icon={window.git} title='GitHub' />
+                <a href="https://github.com/ThiagoDe"  target="_blank"><SideBarRow icon={window.git} title='GitHub' /></a>
               
               
                 {/* <SideBarRow Icon={HistoryIcon} title='History' /> */}

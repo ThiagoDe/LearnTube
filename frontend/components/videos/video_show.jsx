@@ -24,7 +24,8 @@ class VideoShow extends React.Component {
 
         return(
             <div className="video__show">
-                <video id="test" controls>
+
+                <video id="video__frame" controls>
                     <source src={video.videoUrl} type="video/mp4"></source>
                 </video>
 
@@ -38,7 +39,6 @@ class VideoShow extends React.Component {
                 channelTitle={`The learner`}
                 video={video}
 
-                // videoLikes={video.likes} maybe?
             />
 
              <CommentFormContainer videoId={video.id} />
