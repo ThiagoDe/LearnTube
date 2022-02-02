@@ -1,3 +1,17 @@
 // Place all the styles related to the api/likes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.likes {
+ display: box;
+ justify-content: space-around;
+}
+.likes button {
+    border: none;
+    outline: none;
+    background-color: #fafafa;
+}
+.likes button:hover {
+//   background-color: #b8b8b8; /* Green */
+  color: rgb(145, 145, 145);
+  
+}

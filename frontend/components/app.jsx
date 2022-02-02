@@ -20,7 +20,6 @@ const App = () => (
             <SideBar/> 
             <VideoShow/>
         
-
             <Switch>
             <Route exact path="/" component={RecommendedVideosContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer}/>

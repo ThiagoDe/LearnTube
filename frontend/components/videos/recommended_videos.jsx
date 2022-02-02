@@ -36,11 +36,7 @@ class RecommendedVideos extends React.Component {
                          </Link>
                     ))
                 }
-                {/* <VideoCard/>
-                <VideoCard/>
-                <VideoCard/>
-                <VideoCard/>
-                <VideoCard/> */}
+               
             </div>
         </div>
     )

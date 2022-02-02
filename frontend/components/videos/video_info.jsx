@@ -1,18 +1,23 @@
 import React from 'react';
+import LikesContainer from './likes_container';
 
+const VideoInfo = ({title, description, created_at, channelTitle, views, video}) => {
 
-const VideoInfo = ({title, description, created_at, channelTitle, views}) => {
     return (
         <div className='videoinfo'>
             <div className='videoinfo__headline'>
                 <h1>{title}</h1>
-
+                {/* <LikeButtons {...props}  /> */}
             {/*  */}
-
-            </div>
+                </div>
+            
 
             <div className='videoinfo__stats'>
                 <p>{views} views • {created_at.slice(0,10)}</p>
+                
+                <div className="likes">
+                    <LikesContainer video={video}/>
+                </div>
                 
             </div>
             <hr />
