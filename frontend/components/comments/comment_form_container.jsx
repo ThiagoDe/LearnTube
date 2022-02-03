@@ -4,9 +4,9 @@ import { createComment,
          updateComment } from '../../actions/comment_actions';
 
 const mSTP = (state, ownProps) => {
-    // console.log(ownProps)
+    // console.log(state.entities.users[state.session.id])
     return {
-        // user: state.entities.users[session.id],
+        user: state.entities.users[state.session.id],
         video_id: ownProps
     }
 }

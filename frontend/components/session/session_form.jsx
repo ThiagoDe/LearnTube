@@ -10,7 +10,11 @@ class SessionForm extends React.Component {
             errors: []
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-     
+        this.logindemo = this.logindemo.bind(this);
+    }
+
+    logindemo() {
+        this.props.login({ username: "demo", password: "password", })
     }
 
     handleSubmit(e) {
@@ -63,10 +67,14 @@ class SessionForm extends React.Component {
                             {errors}
 
                         <Link to='/signup' >
+                            
                         <p>Create an account</p>
                         </Link>
-                        
+                        <div className='btns-box'>
+                            <button type='submit' onClick={this.logindemo} className='demo-btn'>Demo mode</button>
+                            
                             <button type="submit">{this.props.formType}</button>
+                        </div>
                     </form>
             </div>
      )
