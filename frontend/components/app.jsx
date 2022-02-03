@@ -19,13 +19,13 @@ const App = () => (
         
         <div className='app__page'>
             <SideBar/> 
-            <VideoShow/>
+            {/* <VideoShow/> */}
         
             <Switch>
             <Route exact path="/" component={RecommendedVideosContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer}/>
             <AuthRoute exact path="/signin" component={SigninContainer}/>
-            <AuthRoute exact path="/videos/:videoId" component={VideoShowContainer}/>
+            <Route exact path="/videos/:videoId" component={VideoShowContainer}/>
 
         </Switch>
         </div>

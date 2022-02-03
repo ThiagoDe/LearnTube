@@ -26,6 +26,7 @@ class VideoShow extends React.Component {
     render() {
         const { video, videos } = this.props
         if (!video) { return null}
+        let view = Math.floor((Math.random() * 20) + 57)
 
         return(
             <div className="video__show">
@@ -40,7 +41,7 @@ class VideoShow extends React.Component {
                 title={video.title}
                 description={video.description}
                 created_at={video.created_at}
-                views={`76k`}
+                views={`${view}k`}
                 channelTitle={`The learner`}
                 video={video}
 

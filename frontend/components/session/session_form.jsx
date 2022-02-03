@@ -15,7 +15,8 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.login(this.state)
+        this.props.login(Object.assign({}, this.state))
+            .fail(() => this.setState({errors: this.props.errors}))
     }
 
     update(field) {
@@ -25,11 +26,11 @@ class SessionForm extends React.Component {
     }
 
     render() {
-
+        
         let errors = this.state.errors.map((el, idx) => {
             return <li key={idx} className="error">{el}</li>
         })
-        
+        // debugger
         return (
                     
             <div className="box">

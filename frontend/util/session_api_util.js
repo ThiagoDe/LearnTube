@@ -8,13 +8,14 @@ export const signup = user => (
     })
 )
 // url that #create session
-export const login = user => (
-    $.ajax({
+export const login = user => {
+    // debugger
+   return $.ajax({
         url: "/api/session",
         method: "POST",
         data: { user }
     })
-)
+}
 
 // url that #delete session(there always only one session)
 export const logout = () => (

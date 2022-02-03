@@ -1,5 +1,5 @@
 class Api::SessionsController < ApplicationController
-    before_action :require_signed_in!, only: [:destroy]
+    # before_action :require_signed_in!, only: [:destroy]
 
 
     def create
@@ -9,7 +9,9 @@ class Api::SessionsController < ApplicationController
         )
 
         if @user.nil?
+            # debugger 
             if params[:user][:password].empty? && params[:user][:username].empty?
+                # debugger
                 render json: ["Username and Password cannot be empty"], status: 401
             elsif params[:user][:username].empty?
                 render json: ["Username can't be empty"], status: 401

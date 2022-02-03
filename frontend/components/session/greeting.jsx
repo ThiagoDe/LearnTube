@@ -1,9 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { Link } from 'react-router-dom';
-// import { 
-//   faHandPointRight
-//  } from "@fortawesome/free-regular-svg-icons"
+
 
 const Greeting = ({ currentUser, logout }) => {
   if (currentUser) {

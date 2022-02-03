@@ -20,6 +20,7 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.createNewUser(this.state)
+            .fail(() => this.setState({errors: this.props.errors}))
             // .then( () => this.props.history.push('/comments'))
     }
 

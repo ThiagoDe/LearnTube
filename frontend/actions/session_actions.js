@@ -18,6 +18,7 @@ const logoutCurrentUser = () => {
 }
 
 const receiveErrors = (errors) => {
+    // debugger
     return {
         type: RECEIVE_SESSION_ERRORS,
         errors
@@ -28,18 +29,20 @@ const receiveErrors = (errors) => {
 export const signupUser = formUser => dispatch => (
     APIUtil.signup(formUser)
         .then( user => dispatch(receiveCurrentUser(user))
-        ), err => (
+        , err => (
         dispatch(receiveErrors(err.responseJSON))
-    )
+    ))
 )
 
-export const login = formUser => dispatch => (
+export const login = formUser => dispatch => {
+    // debugger
+    return (
     APIUtil.login(formUser)
         .then( user => dispatch(receiveCurrentUser(user))
-        ), err => (
+        , err => (
         dispatch(receiveErrors(err.responseJSON))
-    )
-)
+    )))
+}
 
 export const logout = () => dispatch => (
     APIUtil.logout()
