@@ -8,12 +8,20 @@ class Api::SessionsController < ApplicationController
         params[:user][:password]
         )
 
-        if @user
+        if @user.nil?
+            if params[:user][:password].empty? && params[:user][:username].empty?
+                render json: ["Username and Password cannot be empty"], status: 401
+            elsif params[:user][:username].empty?
+                render json: ["Username can't be empty"], status: 401
+            elsif params[:user][:password].empty?
+                render json: ["Password can't be empty"], status: 401
+            else
+                render json: ["Wrong credentials!"], status: 401
+            end 
+        else 
             sign_in!(@user)
             render "api/users/show"
-        else
-            flash.now[:errors] = ['Invalid username or password']
-            render :new
+       
         end
     end
 

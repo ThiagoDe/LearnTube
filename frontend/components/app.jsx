@@ -5,7 +5,7 @@ import SignupContainer from './session/signup_container';
 import GreetingContainer from './session/greeting_container';
 import SigninContainer from './session/signin_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_utils'
-import Header from './header'
+import HeaderContainer from './hearder_container'
 import Home from './home';
 import SideBar from './sidebar/sidebar'
 import RecommendedVideosContainer from './videos/recommended_videos_container'
@@ -15,7 +15,8 @@ import VideoShowContainer from './videos/video_show_container';
 const App = () => (
     <div className="app">
        
-        <Header/>
+        <HeaderContainer/>
+        
         <div className='app__page'>
             <SideBar/> 
             <VideoShow/>

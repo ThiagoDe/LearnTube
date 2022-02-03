@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GreetingContainer from './session/greeting_container'
-
+// import UserIconButtonContainer from "./user/user_icon_button_container";
 
 class Header extends React.Component {
 
@@ -11,6 +11,18 @@ class Header extends React.Component {
   }
 
     render() {
+      let prevStatus
+      if (this.props.currentUser) {
+        prevStatus = <GreetingContainer className='header__icon'/>
+      } else {
+        prevStatus = <Link to='/signin'>
+               <img className='header__signin'
+                alt=''
+                src={window.signinButton}
+               />
+            </Link>
+      }
+
     return (
 
         <div className='header'>
@@ -39,28 +51,22 @@ class Header extends React.Component {
                 src={window.search}
                 alt=''
               />
-            {/* <SearchIcon className='header__searchbutton'/> */}
           </div>
 
           <div className="header__right">
-            {/* <FileUploadIcon className='header__icon'/> */}
             
-            {/* change the greeting to the modal */}
-             <GreetingContainer className='header__icon'/>
+
+            {/* <GreetingContainer className='header__icon'/>
            
-            <Link to='/signin'>
+           
+          <Link to='/signin'>
                <img className='header__signin'
                 alt=''
                 src={window.signinButton}
                />
-            </Link>
-
-            <Link to='/'>
-                {/* <Avatar
-                alt='Thiago'
-                src={window.profilePic}
-                /> */}
-            </Link> 
+            </Link> */}
+            { prevStatus }
+          
 
           </div>
         </div>

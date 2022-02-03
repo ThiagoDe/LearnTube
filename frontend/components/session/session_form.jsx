@@ -6,7 +6,8 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            errors: []
         };
         this.handleSubmit = this.handleSubmit.bind(this);
      
@@ -24,6 +25,10 @@ class SessionForm extends React.Component {
     }
 
     render() {
+
+        let errors = this.state.errors.map((el, idx) => {
+            return <li key={idx} className="error">{el}</li>
+        })
         
         return (
                     
@@ -54,6 +59,7 @@ class SessionForm extends React.Component {
                                 </input>
                             <label> Password </label>
                         </div>
+                            {errors}
 
                         <Link to='/signup' >
                         <p>Create an account</p>
