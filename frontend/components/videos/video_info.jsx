@@ -9,13 +9,12 @@ const VideoInfo = ({title, description, created_at, channelTitle, views, video})
         <div className='videoinfo'>
             <div className='videoinfo__headline'>
                 <h1>{title}</h1>
-                {/* <LikeButtons {...props}  /> */}
-            {/*  */}
+              
                 </div>
             
 
             <div className='videoinfo__stats'>
-                <p>{views} views • {created_at.slice(0,10)}</p>
+                <p id='status'>{views} views • {created_at.slice(0,10)}</p>
                 
                 <div className="likes">
                     <LikesContainer video={video}/>
@@ -25,7 +24,8 @@ const VideoInfo = ({title, description, created_at, channelTitle, views, video})
             <hr />
             <div className="videoinfo__channel">
                 {/* <div> */}
-                        <FontAwesomeIcon icon={faUserCircle} className="user__cicle"/>
+                        {/* <FontAwesomeIcon icon={faUserCircle} className="user__cicle"/> */}
+                        <img id="avatar" src={window.profilePic}/>
                     <div className='videoinfo__channelinfo'>
                         <h3 className='videoinfo__channeltitle'>{channelTitle}</h3>
                     </div>

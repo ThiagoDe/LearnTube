@@ -32,9 +32,10 @@ class RecommendedVideos extends React.Component {
                                 image={video.thumbnail}
                                 title={video.title}
                                 views={`${Math.floor((Math.random() * 40) + 7)}k`}
-                                channel={'Thiago BR'}
+                                channel={'Thiago BR ✓'}
                                 channelImage={window.profilePic}
                                 key={video.id}
+                                timestamp={video.created_at}
                             />
                          </Link>
                     ))

@@ -1,10 +1,6 @@
 // // Place all the styles related to the api/comments controller here.
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
-.comment-index {
-    // display: flex;
-    // justify-content: start;
-}
 
 .comment-display {
     display: flex;
@@ -229,5 +225,5 @@ input::placeholder {
 
 .vii-no-user-icon {
     color: rgb(110, 110, 160);
-    font-size: 40px;
+    font-size: 35px;
 }

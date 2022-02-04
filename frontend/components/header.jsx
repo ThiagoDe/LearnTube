@@ -55,16 +55,6 @@ class Header extends React.Component {
 
           <div className="header__right">
             
-
-            {/* <GreetingContainer className='header__icon'/>
-           
-           
-          <Link to='/signin'>
-               <img className='header__signin'
-                alt=''
-                src={window.signinButton}
-               />
-            </Link> */}
             { prevStatus }
           
 

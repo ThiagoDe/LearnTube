@@ -41,7 +41,7 @@ class VideoShow extends React.Component {
                 description={video.description}
                 created_at={video.created_at}
                 views={`${view}k`}
-                channelTitle={`The learner`}
+                channelTitle={`The learner ✓`}
                 video={video}
 
             />

@@ -110,12 +110,21 @@
     }
 }
 .videoinfo__stats {
+    // margin-bottom: 0px;
+    // padding-bottom: 0px;
     display: flex;
     justify-content: start;
     color: gray;
 }
+
+#status {
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
 .likes {
     // display: flex;
+
     margin-left: 40px;
     font-size: 1.1rem;
     color:black;
@@ -147,6 +156,15 @@
     display: flex;
     flex-direction: row;
     justify-content: start;
+}
+
+#avatar {
+    
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  float: left;
+
 }
 .user__cicle{
     height: inherit;
