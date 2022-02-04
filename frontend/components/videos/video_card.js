@@ -8,9 +8,7 @@ function VideoCard({ image, title, channel, views, timestamp, channelImage }) {
         <div className="videoCard">
             <img className='videoCard__image' src={image} alt=""/>
             <div className="videoCard__info">
-                {/* <Avatar className="videoCard__avatar"
-                 alt={channel} src={channelImage}
-                /> */}
+              
                 <FontAwesomeIcon icon={faUserCircle} className="vii-no-user-icon"/>
                 <div className="videoCard__text">
                     <h4>{title}</h4>
