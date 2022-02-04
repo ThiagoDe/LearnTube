@@ -19,7 +19,6 @@ const App = () => (
         
         <div className='app__page'>
             <SideBar/> 
-            {/* <VideoShow/> */}
         
             <Switch>
             <Route exact path="/" component={RecommendedVideosContainer} />

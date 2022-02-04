@@ -1,10 +1,15 @@
 // // Place all the styles related to the api/comments controller here.
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
+.comment-index {
+    // display: flex;
+    // justify-content: start;
+}
+
 .comment-display {
     display: flex;
     margin: 24px;
-
+    margin-left: 0px;
     .c-icon {
         width: 24px;
         height: 24px;
@@ -27,43 +32,43 @@
     justify-content: space-around;
     width: 100%;
 
-    // .comment-user-date {
-    //     display: flex;
-    //     flex-direction: row;
+    .comment-user-date {
+        display: flex;
+        flex-direction: row;
 
-    //     p {
-    //         margin-left: 5px;
-    //         color: #606060; 
-    //     }
+        p {
+            margin-left: 5px;
+            color: #606060; 
+        }
     }
 
-//     h3 {
-//         font-weight: bold;
-//         color: black;
-//         font-family: $roboto;
-//         margin: 0 0 3px;
-//         font-size: 14px;
-//         overflow: hidden;
-//         text-overflow: ellipsis;
-//         white-space: normal;
-//     }
+    h3 {
+        font-weight: bold;
+        color: black;
+        // font-family: $roboto;
+        margin: 0 0 3px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
 
-//     p {
-//         margin: 0;
-//         color: #030303;
-//         overflow: hidden;
-//         text-overflow: ellipsis;
-//         white-space: nowrap;
-//     }
-// }
+    p {
+        margin: 0;
+        color: #030303;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
 
-// .comment-user-icon {
-//     height: 40px;
-//     aspect-ratio: auto 40 / 40;
-//     width: 40px;
-//     border-radius: 50%;
-//     font-size: 40px;
-// }
+.comment-user-icon {
+    height: 40px;
+    aspect-ratio: auto 40 / 40;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 40px;
+}
 
 #comment-btn {
     margin: 0;
@@ -176,49 +181,53 @@ input::placeholder {
 //     padding: 8px 18px;
 // }
 
-// .comment-menu:hover {
-//     background-color: #e0e0e0;
-//     cursor: pointer;
-// }
+.comment-menu:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
 
-// #c-menu-container {
-//     display: flex;
-//     justify-content: flex-end;
-// }
+#c-menu-container {
+    display: flex;
+    justify-content: flex-end;
+}
 
-// #comments-likes-box {
-//         display:flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         height: 24px;
-//         margin-top: 3px;
+#comments-likes-box {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 24px;
+        margin-top: 3px;
 
         
-//         button {
-//             display: flex;
-//             align-items: center;
-//             height: 16px;
-//             padding-left: 3px;
-//             border: none;
-//             background-color: transparent;
-//             cursor: pointer;
+        button {
+            display: flex;
+            align-items: center;
+            height: 16px;
+            padding-left: 3px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
             
-//             div {
-//                 letter-spacing: 0.25px;
-//                 font-size: 13px;
-//             }
+            div {
+                letter-spacing: 0.25px;
+                font-size: 13px;
+            }
             
-//             svg {
-//                 height: 16px;
-//                 width: 16px;
-//                 padding: 6px;
-//             }
+            svg {
+                height: 16px;
+                width: 16px;
+                padding: 6px;
+            }
 
-//             svg:first-child {
-//                 padding-left: 0;
-//             }
+            svg:first-child {
+                padding-left: 0;
+            }
             
             
-//         }
-//     }
+        }
+}
 
+.vii-no-user-icon {
+    color: rgb(110, 110, 160);
+    font-size: 40px;
+}

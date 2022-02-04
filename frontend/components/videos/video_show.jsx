@@ -32,9 +32,7 @@ class VideoShow extends React.Component {
         return(
             <div className="video__show">
 
-                {/* <video id="video__frame" controls autoPlay>
-                    <source src={video.videoUrl} type="video/mp4"></source>
-                </video> */}
+               
                 <video id='video__frame' src={video.videoUrl}  controls autoPlay/>
             
 
@@ -49,7 +47,7 @@ class VideoShow extends React.Component {
             />
 
              <CommentFormContainer videoId={video.id} />
-            <CommentIndexContainer />
+            <CommentIndexContainer videoId={video.id}/>
 
             <div className='right__col'>
                 <RecommendedVideosContainer/>
