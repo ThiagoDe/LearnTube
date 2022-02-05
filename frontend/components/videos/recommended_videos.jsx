@@ -15,7 +15,9 @@ class RecommendedVideos extends React.Component {
     render() {
 
      const { videos, fetchVideos} = this.props 
-        // let view = Math.floor((Math.random() * 20) + 57)
+     const channles = ['MasterYoda', 'Dumbledore', 'Einstein', 'Master Splinter', 'Hermione', 'Betty Boop', 'Luke Skywalker', 'Issac Newton', 'Lisa Simpson']
+        // console.log(channles.shift())
+        // console.log(channles.shift())
         let view 
     return (
         <div className='recommendedVideos'>
@@ -29,10 +31,11 @@ class RecommendedVideos extends React.Component {
                         //    { view = Math.floor((Math.random() * 20) + 57)}
                         <Link key={video.id} to={`/videos/${video.id}`} className='link__video'>
                             <VideoCard
+                                
                                 image={video.thumbnail}
                                 title={video.title}
                                 views={`${Math.floor((Math.random() * 40) + 7)}k`}
-                                channel={'Thiago BR ✓'}
+                                channel={`${channles.shift()} ✓`}
                                 channelImage={window.profilePic}
                                 key={video.id}
                                 timestamp={video.created_at}
