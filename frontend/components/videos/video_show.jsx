@@ -25,6 +25,7 @@ class VideoShow extends React.Component {
         }
     }
     render() {
+        console.log('video show', this.props)
         const { video, videos } = this.props
         if (!video) { return null}
         let view = Math.floor((Math.random() * 20) + 57)
@@ -47,7 +48,7 @@ class VideoShow extends React.Component {
             />
 
              <CommentFormContainer videoId={video.id} />
-            <CommentIndexContainer videoId={video.id}/>
+             <CommentIndexContainer videoId={video.id}/>
 
             <div className='right__col'>
                 <RecommendedVideosContainer/>
