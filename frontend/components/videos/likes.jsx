@@ -11,12 +11,12 @@ class Likes extends React.Component {
     
     constructor(props){
         super(props) 
-      
-
+      console.log(props, 'props from like')
     this.state = {
           likeCount: null,
           dislikeCount: null,
-         
+          likable: true,
+          dislikable: true
         };
         
     this.likeHandler = this.likeHandler.bind(this);
@@ -38,21 +38,41 @@ class Likes extends React.Component {
      }
 
     likeHandler() {
-    // if (this.state.likeCount === this.originalLikes()) {
-      this.setState(state => ({
-        likeCount: state.likeCount + 1,
-        // dislikeCount: dislikes
-      }));
-    // }
+        // console.log(this.state, 'state likes')
+        if (!this.props.user) return null
+        if (this.state.likable && this.state.dislikable) {
+            this.setState(state => ({
+                likeCount: state.likeCount + 1,
+                likable: !state.likable,
+                dislikable: true
+            }));
+        } else if (this.state.likable && !this.state.dislikable) {
+            this.setState(state => ({
+                likeCount: state.likeCount + 1,
+                dislikeCount: state.dislikeCount - 1,
+                likable: !state.likable,
+                dislikable: true
+            }));
+        }
   }
 
     dislikeHandler() {
-        // if (this.state.dislikeCount === this.originalDislikes()) {
-        this.setState(state => ({
-            dislikeCount: state.dislikeCount + 1,
-            // likeCount: likes
-        }));
-        // }
+        if (!this.props.user) return null
+        if (this.state.dislikable && !this.state.likable) {
+    
+            this.setState(state => ({
+                likeCount: state.likeCount - 1,
+                dislikeCount: state.dislikeCount + 1,
+                dislikable: !state.dislikable,
+                likable: true
+            }));
+        } else if (this.state.dislikable && this.state.likable){
+            this.setState(state => ({
+                dislikeCount: state.dislikeCount + 1,
+                dislikable: !state.dislikable,
+                likable: true
+            }));
+        }
       }
     
     

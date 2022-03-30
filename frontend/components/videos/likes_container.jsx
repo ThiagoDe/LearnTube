@@ -13,7 +13,8 @@ const mSTP = ( state, ownProps ) => {
 
   return{
       likes:likes,
-      video: ownProps.video
+      video: ownProps.video,
+      user: state.entities.users[state.session.id],
   }
 }
 

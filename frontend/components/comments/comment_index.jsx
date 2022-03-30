@@ -12,8 +12,8 @@ class CommentIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log(prevProps,"Component did update");
-        console.log(this.props,"Component did thisProps");
+        // console.log(prevProps,"Component did update");
+        // console.log(this.props,"Component did thisProps");
         if(prevProps.comments.length < this.props.comments.length) {
             this.props.fetchComments(this.props.video)
         }
