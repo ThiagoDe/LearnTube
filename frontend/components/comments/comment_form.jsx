@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import SignupContainer from '../session/signup'
 import { useHistory } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

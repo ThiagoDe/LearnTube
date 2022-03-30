@@ -11,12 +11,16 @@ class CommentIndex extends React.Component {
         this.props.fetchComments(this.props.video)
     }
 
-    shuffle(array) {
-     return array.sort(() => Math.random() - 0.5);
+    componentDidUpdate(prevProps, prevState) {
+        console.log("Component did update")
     }
 
+    // shuffle(array) {
+    //  return array.sort(() => Math.random() - 0.5);
+    // }
+
     render() {
-        console.log(this.props.comments, 'comment index')
+        // console.log(this.props.comments, 'comment index')
         if (!this.props.comments){return null}
         let comments = this.props.comments.filter(c => c.video_id === this.props.videoId)
         let deleteComment = this.props.deleteComment

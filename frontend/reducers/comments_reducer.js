@@ -25,8 +25,9 @@ const commentsReducer = (state = [], action) => {
 
         case RECEIVED_COMMENT:
             // debugger
-            // newState.unshift(action.comment);
-            return Object.assign(...newState, action.comment) 
+            newState.unshift(action.comment);
+            // return Object.assign(...newState, action.comment) 
+            return newState
 
         case REMOVE_COMMENT:
             return newState.filter(comment => comment.id != action.commentId);

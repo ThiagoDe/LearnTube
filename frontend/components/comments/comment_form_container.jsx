@@ -14,6 +14,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return {       
         createComment: (comment) => dispatch(createComment(comment)),
+        
     }
 }
 
