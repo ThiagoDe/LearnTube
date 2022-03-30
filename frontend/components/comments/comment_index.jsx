@@ -16,10 +16,11 @@ class CommentIndex extends React.Component {
     }
 
     render() {
+        console.log(this.props.comments, 'comment index')
         if (!this.props.comments){return null}
-        let comments = this.props.comments
+        let comments = this.props.comments.filter(c => c.video_id === this.props.videoId)
         let deleteComment = this.props.deleteComment
-        let randomComments = this.shuffle(comments)
+        // let randomComments = this.shuffle(comments)
 
         if (comments) {
 
@@ -31,12 +32,13 @@ class CommentIndex extends React.Component {
             return (
                 <div className="comment-index">
                     {/* <h1>test here </h1> */}
-                    {randomComments.map(comment => (
+                    {comments.map(comment => (
                         <CommentIndexItem
                             key={comment.id}
                             comment={comment}
                             deleteComment={deleteComment}
                             userId={1}
+                            // user={user}
                             // createLike={createLike}
                             // updateLike={updateLike}
                             // deleteLike={deleteLike}                 

@@ -12,6 +12,7 @@ class Api::CommentsController < ApplicationController
     end
 
     def create
+        # debugger 
         if params[:comment][:body].empty?
             render json: ["comment cannot be empty"], status: 422
             return nil

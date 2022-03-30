@@ -4,16 +4,15 @@ import { createComment,
          updateComment } from '../../actions/comment_actions';
 
 const mSTP = (state, ownProps) => {
-    // console.log(state.entities.users[state.session.id])
+    // console.log(ownProps, 'from comment form container')
     return {
         user: state.entities.users[state.session.id],
-        video_id: ownProps
+        video_id: ownProps.videoId
     }
 }
 
 const mDTP = (dispatch) => {
-    return {
-        
+    return {       
         createComment: (comment) => dispatch(createComment(comment)),
     }
 }

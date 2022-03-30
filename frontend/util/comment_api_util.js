@@ -7,13 +7,14 @@ export const fetchComments = (videoId) => (
     })
 )
 
-export const createComment = (comment) => (
-     $.ajax({
+export const createComment = (comment) => {
+    // debugger
+     return $.ajax({
         method: 'POST',
         url: `/api/videos/${comment.video_id}/comments`,
         data: {comment}
     })
-)
+}
 
 export const updateComment = (comment) => (
      $.ajax({
