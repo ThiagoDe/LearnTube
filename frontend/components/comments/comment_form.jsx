@@ -1,25 +1,39 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function CommentForm(props) {
+    console.log(props,'comment form')
     const { user, video_id } = props;
     const [body, setBody] = useState("");
+    const history = useHistory();
+    // const [username, ] = useEffect('')
     const [hidden, setHidden] = useState(true);
 
     function handleInput(e) {
-        setBody(e.currentTarget.value)
+        setBody(e.currentTarget.value);
+        // setUsername(props.user.username)
     }
+
+//     useEffect(() => {
+//     // Update the document title using the browser API
+//     document.title = `You clicked ${count} times`;
+//   });
 
     function handleSubmit(e) {
         e.preventDefault();
         if (!user) {
-            props.history.push('/login')
+            // props.history.push('/login')
+           history.push('/signin')
             return
         }
+        // debugger
+        // console.log(body, 'body from commet form')
         props.createComment({
             body,
-            commenter_id: user.id,
-            video_id
+            user_id: user.id,
+            video_id,
+            user
         })
         setBody("")
         toggleSubmitBtn(true)

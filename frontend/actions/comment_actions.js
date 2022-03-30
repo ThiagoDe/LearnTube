@@ -30,10 +30,12 @@ export const deleteComment = (comment) => dispatch => {
         .then( comment => dispatch(removeComment(comment.id)))
 }
 
-export const createComment = comment => dispatch => (
-    APIUtil.createComment(comment)
+export const createComment = comment => dispatch => {
+    // debugger
+    // console.log(comment, 'createcomment')
+    return APIUtil.createComment(comment)
         .then( comment => dispatch(receivedComment(comment)))
-)
+}
 
 export const fetchComments = videoId => dispatch => (
     APIUtil.fetchComments(videoId)

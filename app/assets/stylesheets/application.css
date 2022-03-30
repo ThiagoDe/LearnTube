@@ -71,7 +71,7 @@ input {
     -webkit-appearance: none
 }
 .header__right {
-     cursor: pointer;
+    cursor: pointer;
     display: flex;
     align-items: center;
 }

@@ -7,7 +7,7 @@ import { createLike,
 import { fetchComments } from '../../actions/comment_actions';
 
 const mSTP = ({ entities, session }, ownProps) => {
-    console.log(session)
+    // console.log(entities.comments, 'commets index container')
     return {
         comments: Object.values(entities.comments),
         userId: session.id,

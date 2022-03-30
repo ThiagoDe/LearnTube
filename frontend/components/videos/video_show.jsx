@@ -9,6 +9,7 @@ import CommentIndexContainer from '../comments/comment_index_container'
 class VideoShow extends React.Component {
     constructor(props) {
         super(props);
+        // console.log('video show!!!', this.props)
     }
 
     componentDidMount() {
@@ -25,6 +26,7 @@ class VideoShow extends React.Component {
         }
     }
     render() {
+        // console.log('video show!!!', this.props)
         const { video, videos } = this.props
         if (!video) { return null}
         let view = Math.floor((Math.random() * 20) + 57)
@@ -32,9 +34,7 @@ class VideoShow extends React.Component {
         return(
             <div className="video__show">
 
-               
                 <video id='video__frame' src={video.videoUrl}  controls autoPlay/>
-            
 
             <VideoInfo 
                 title={video.title}
@@ -47,7 +47,7 @@ class VideoShow extends React.Component {
             />
 
              <CommentFormContainer videoId={video.id} />
-            <CommentIndexContainer videoId={video.id}/>
+             <CommentIndexContainer videoId={video.id} /> {/* newComment={} ?? */}
 
             <div className='right__col'>
                 <RecommendedVideosContainer/>
