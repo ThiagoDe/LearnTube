@@ -4,11 +4,35 @@ import GreetingContainer from './session/greeting_container'
 // import UserIconButtonContainer from "./user/user_icon_button_container";
 
 class Header extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            searchquery: ''
+        };
+
+        this.update = this.update.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
+    }
+
+  update(e) {
+      // console.log(this.state, 'this state')
+        this.setState({ searchquery: e.currentTarget.value });
+    }
 
   handleToggle() {
    const button = document.querySelector('.sidebar')
     button.classList.toggle('active')
-  }
+    }
+
+  handleSearch(e) {
+        e.preventDefault();
+
+        if (this.state.searchquery.length > 0) {
+            this.props.history.push({
+                pathname: `/search/${this.state.searchquery}`
+            })
+        }
+    }  
 
     render() {
       let prevStatus
@@ -46,11 +70,16 @@ class Header extends React.Component {
           </div>
           
           <div className="header__center">
-            <input className="header__searchbutton" type='text' placeholder="Search and Learn" />
-              <img className='header__search__icon'
-                src={window.search}
-                alt=''
+            <form className="search-container" onSubmit={this.handleSearch} ></form>
+              <input className="header__searchbutton" type='text' placeholder="Search and Learn" 
+                  value={this.state.searchquery} 
+                  onChange={this.update}
+                  />
+                <img className='header__search__icon'
+                  src={window.search}
+                  alt=''
               />
+              <form/>
           </div>
 
           <div className="header__right">
