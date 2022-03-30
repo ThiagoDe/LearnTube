@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import RecommendedVideos from './recommended_videos';
+import RightsideVideos from './rightside_videos';
 import { fetchVideos} from '../../actions/video_actions';
 
 const mSTP = ( state, ownProps ) => {
@@ -19,4 +19,4 @@ const mDTP = (dispatch) => {
     }
 }
 
-export default connect(mSTP, mDTP)(RecommendedVideos);
+export default connect(mSTP, mDTP)(RightsideVideos);

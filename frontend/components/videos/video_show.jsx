@@ -3,6 +3,7 @@ import VideoInfo from './video_info'
 import { Link } from 'react-router-dom'
 import VideoCard from './video_card'
 import RecommendedVideosContainer from './recommended_videos_container'
+import RightsideVideosContainer from './rightside_videos_container'
 import CommentFormContainer from '../comments/comment_form_container'
 import CommentIndexContainer from '../comments/comment_index_container'
 
@@ -50,7 +51,8 @@ class VideoShow extends React.Component {
              <CommentIndexContainer videoId={video.id} /> {/* newComment={} ?? */}
 
             <div className='right__col'>
-                <RecommendedVideosContainer/>
+                {/* <RecommendedVideosContainer videoId={video.id}/> */}
+                <RightsideVideosContainer videoId={video.id}/>
             </div>
             
             </div>

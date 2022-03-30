@@ -3,15 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faThumbsDown } from "@fortawesome/free-regular-svg-icons";
 
-
-// const likes = likeCount
-// const dislikes = dislikeCount
-
 class Likes extends React.Component {
     
     constructor(props){
         super(props) 
-      console.log(props, 'props from like')
+    //   console.log(props, 'props from like')
     this.state = {
           likeCount: null,
           dislikeCount: null,

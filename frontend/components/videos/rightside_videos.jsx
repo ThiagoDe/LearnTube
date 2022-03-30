@@ -2,7 +2,7 @@ import React from 'react'
 import VideoCard from './video_card'
 import { Link } from 'react-router-dom'
 
-class RecommendedVideos extends React.Component {
+class RightsideVideos extends React.Component {
     constructor(props){
         super(props)
         console.log(props, 'from recomended')
@@ -17,7 +17,7 @@ class RecommendedVideos extends React.Component {
 
      const { videos, fetchVideos} = this.props 
      const channles = ['MasterYoda', 'Dumbledore', 'Einstein', 'Master Splinter', 'Hermione', 'Betty Boop', 'Luke Skywalker', 'Issac Newton', 'Lisa Simpson']
-     const videosFilter = videos.filter(v => v.videoId !== this.props.videoId)
+     const videosFilter = videos.filter(v => v.id !== this.props.videoId)
         console.log(videosFilter, 'filtered')
      let view 
     return (
@@ -27,7 +27,7 @@ class RecommendedVideos extends React.Component {
                 
 
                 {
-                    videos.map(video => (
+                    videosFilter.map(video => (
                         
                         //    { view = Math.floor((Math.random() * 20) + 57)}
                         <Link key={video.id} to={`/videos/${video.id}`} className='link__video'>
@@ -51,4 +51,4 @@ class RecommendedVideos extends React.Component {
     }
 }
 
-export default RecommendedVideos
+export default RightsideVideos
