@@ -4,7 +4,7 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faUserAlt, faUserAstronaut, faUserCircle, faUserSlash } from '@fortawesome/free-solid-svg-icons';
 
 function CommentIndexItem(props) {
-    console.log(props, 'comment index item')
+    // console.log(props, 'comment index item')
     const { comment } = props;
     const commentMenu = useRef(null)
 

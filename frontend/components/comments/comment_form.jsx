@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function CommentForm(props) {
-    console.log(props,'comment form')
+    // console.log(props,'comment form')
     const { user, video_id } = props;
     const [body, setBody] = useState("");
     const history = useHistory();

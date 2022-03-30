@@ -11,8 +11,12 @@ class CommentIndex extends React.Component {
         this.props.fetchComments(this.props.video)
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        console.log("Component did update")
+    componentDidUpdate(prevProps) {
+        console.log(prevProps,"Component did update");
+        console.log(this.props,"Component did thisProps");
+        if(prevProps.comments.length < this.props.comments.length) {
+            this.props.fetchComments(this.props.video)
+        }
     }
 
     // shuffle(array) {
@@ -22,7 +26,7 @@ class CommentIndex extends React.Component {
     render() {
         // console.log(this.props.comments, 'comment index')
         if (!this.props.comments){return null}
-        let comments = this.props.comments.filter(c => c.video_id === this.props.videoId)
+        let comments = this.props.comments.filter(c => c.video_id === this.props.videoId).reverse();
         let deleteComment = this.props.deleteComment
         // let randomComments = this.shuffle(comments)
 

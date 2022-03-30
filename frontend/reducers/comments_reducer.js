@@ -12,7 +12,7 @@ import {
 } from '../actions/like_actions';
 
 const commentsReducer = (state = [], action) => {
-    // console.log(action, 'from comments reducer')
+    console.log(state, 'from comments reducer')
     Object.freeze(state);
     // debugger
     let newState = [state]
@@ -25,9 +25,11 @@ const commentsReducer = (state = [], action) => {
 
         case RECEIVED_COMMENT:
             // debugger
-            newState.unshift(action.comment);
-            // return Object.assign(...newState, action.comment) 
-            return newState
+            console.log(newState,'from received comment')
+            console.log(action,'from received comment action')
+            // newState.unshift(action.comment);
+            return Object.assign(action.comment, ...newState) 
+            // return newState
 
         case REMOVE_COMMENT:
             return newState.filter(comment => comment.id != action.commentId);
