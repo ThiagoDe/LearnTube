@@ -22,6 +22,17 @@ class Likes extends React.Component {
         
         this.setState({likeCount: this.originalLikes(), dislikeCount: this.originalDislikes()})
     }
+    componentDidUpdate(prevProp) {
+        // console.log(prevProp.video.id, 'prevProv like prop')
+        // console.log(this.props.video.id, 'thisProps ')
+        if(this.props.video.id !== prevProp.video.id){
+        //    this.props.fetchVideo(this.props.match.params.videoId);
+        // (this.props.video).load()
+        // console.log(this.state.likeCount,'from didupdate before')
+        this.setState({likeCount: this.originalLikes(), dislikeCount: this.originalDislikes()})
+        // console.log(this.state.likeCount,'from didupdate')
+        }
+    }
 
     originalLikes(){
         const like =  Math.floor((Math.random() * 400) + 547)
