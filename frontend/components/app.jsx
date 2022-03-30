@@ -5,12 +5,13 @@ import SignupContainer from './session/signup_container';
 import GreetingContainer from './session/greeting_container';
 import SigninContainer from './session/signin_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_utils'
-import HeaderContainer from './hearder_container'
+import HeaderContainer from './header.jsx'
 import Home from './home';
 import SideBar from './sidebar/sidebar'
 import RecommendedVideosContainer from './videos/recommended_videos_container'
 import VideoShow from './videos/video_show'
 import VideoShowContainer from './videos/video_show_container';
+import SearchedVideos from './searched_videos';
 
 const App = () => (
     <div className="app">
@@ -25,6 +26,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupContainer}/>
             <AuthRoute exact path="/signin" component={SigninContainer}/>
             <Route exact path="/videos/:videoId" component={VideoShowContainer}/>
+            <Route exact path="/search/:searchQuery" component={SearchedVideos} />
 
         </Switch>
         </div>
