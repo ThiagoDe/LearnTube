@@ -1,6 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import GreetingContainer from './session/greeting_container'
+import { connect } from 'react-redux';
+import { logout } from '../actions/session_actions'
+
 // import UserIconButtonContainer from "./user/user_icon_button_container";
 
 class Header extends React.Component {
@@ -25,8 +28,9 @@ class Header extends React.Component {
     }
 
   handleSearch(e) {
+      // console.log(this.state, 'this state')
+      // console.log('handle search')
         e.preventDefault();
-
         if (this.state.searchquery.length > 0) {
             this.props.history.push({
                 pathname: `/search/${this.state.searchquery}`
@@ -70,16 +74,20 @@ class Header extends React.Component {
           </div>
           
           <div className="header__center">
-            <form className="search-container" onSubmit={this.handleSearch} ></form>
-              <input className="header__searchbutton" type='text' placeholder="Search and Learn" 
+            {/* className="search-container" */}
+            <form onSubmit={this.handleSearch} > 
+              <input className="header__searchbutton" type='text' placeholder=" Search and Learn" 
                   value={this.state.searchquery} 
                   onChange={this.update}
-                  />
-                <img className='header__search__icon'
-                  src={window.search}
-                  alt=''
               />
-              <form/>
+                  <button className="search-button" type="submit">
+                    <img className='header__search__icon'
+                      src={window.search}
+                      alt=''
+                    />
+                  </button>
+              </form>
+              
           </div>
 
           <div className="header__right">
@@ -93,4 +101,18 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+const mapStateToProps = (state, ownProps) => {
+
+    return ({
+        videos: Object.values(state.entities.videos),
+        currentUser: state.entities.users[state.session.id]
+      
+    })
+}
+
+const mDTP = (dispatch) => {
+    return {
+       logout: () => dispatch(logout()),
+    }
+}
+export default withRouter(connect(mapStateToProps, mDTP)(Header));

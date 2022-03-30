@@ -3,3 +3,30 @@
     background-color: #f9f9f9;
     display: flex;
 }
+
+.search-button {
+    float:right;
+    background: rgb(238, 237, 237);
+    width: 64px;
+    height: 75%;
+    border: 1px solid;
+    border-color: rgb(50, 50, 50);
+    border-radius: 2px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    // margin-right: 10px;
+    
+    img {
+        opacity: 0.7;
+    }
+
+    &:hover {
+        background: rgb(214, 214, 214);
+
+        img {
+            opacity: 1;
+        }
+    }
+}
