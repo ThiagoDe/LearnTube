@@ -52,7 +52,7 @@ Handling errors and maintaining great UX
 
 ![search_gif](https://user-images.githubusercontent.com/89544506/161334653-6f7343d6-72c5-4e66-bfc9-74146b8905ac.gif)
 
-Having a dynamic search bar can be a challenge when the user tries to find the content using substring and key works. This function filter not only finds the perfect match but also finds queries in the description, title, or even users' suggestions and channels regardless of lower case or down case letters.
+Having a dynamic search bar can be a challenge when the user tries to find the content using substring and key works. This filter function not only finds the perfect match but also finds queries in the description, title, or even users' suggestions and channels regardless of lower case or down case letters.
 
 ```js
     filterVideo(){
