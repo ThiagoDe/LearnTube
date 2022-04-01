@@ -52,6 +52,8 @@ Handling errors and maintaining great UX
 
 ![search_gif](https://user-images.githubusercontent.com/89544506/161334653-6f7343d6-72c5-4e66-bfc9-74146b8905ac.gif)
 
+Having a dynamic search bar can be a challenge when the user tries to find the content using substring and key works. This function filter not only finds the perfect match but also finds queries in the description, title, or even users' suggestions and channels regardless of lower case or down case letters.
+
 ```js
     filterVideo(){
         let filteredVideos;
@@ -69,3 +71,23 @@ Handling errors and maintaining great UX
 * ## Like, dislike and comment videos 
 
 ![comments](https://user-images.githubusercontent.com/89544506/161344486-80f966fb-2151-49ad-9a26-18dfe39c9975.gif)
+
+When the users are logged in they are allowed to like or dislike videos and also submit comments that through models associations are dispatched and stored in the same database tables schema, creating a relational between video, user, and comment.
+
+```js
+    //thunk action creators
+    export const deleteComment = (comment) => dispatch => {
+        return  APIUtil.deleteComment(comment)
+             .then( comment => dispatch(removeComment(comment.id)))
+    }
+
+    export const createComment = comment => dispatch => {
+      return APIUtil.createComment(comment)
+        .then( comment => dispatch(receivedComment(comment)))
+    }
+
+    export const fetchComments = videoId => dispatch => (
+       APIUtil.fetchComments(videoId)
+            .then(comments => dispatch(receiveAllComments(comments)))
+    )
+```
