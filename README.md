@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img width="300" alt="learn_hat_logo" src="https://user-images.githubusercontent.com/89544506/161329079-899bb581-f0e4-400f-b4eb-82306b01692a.png">
 
-Things you may want to cover:
+LearnTube is an online video sharing and social media platform that provides content, tutorials, courses, and material for learning lovers!
 
-* Ruby version
+Technologies:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby on Rails
+* React/Redux
+* PostgreSQL
+* JavaScript / AJAX / JBuilder
+* HTML5 / CSS
