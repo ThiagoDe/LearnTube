@@ -4,10 +4,16 @@
 
 LearnTube is an online video sharing and social media platform that provides content, tutorials, courses, and material for learning lovers!
 
-Technologies:
+# Technologies:
 
 * Ruby on Rails
 * React/Redux
 * PostgreSQL
 * JavaScript / AJAX / JBuilder
 * HTML5 / CSS
+
+# Features
+
+## User account creation and login
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/89544506/161333065-8259a9ff-ae1b-4d02-915d-2a787d4fa07d.gif)
