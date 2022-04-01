@@ -14,11 +14,11 @@ LearnTube is an online video sharing and social media platform that provides con
 
 # Features
 
-## User account creation and login
+* ## User account creation and login
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/89544506/161333065-8259a9ff-ae1b-4d02-915d-2a787d4fa07d.gif)
 
-## Search Bar
+* ## Search Bar
 
 ![search_gif](https://user-images.githubusercontent.com/89544506/161334653-6f7343d6-72c5-4e66-bfc9-74146b8905ac.gif)
 
