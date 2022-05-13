@@ -80,12 +80,12 @@ pic9 = open("https://learn-tube-seeds.s3.us-west-1.amazonaws.com/css.png")
 vid9.thumbnail.attach(io: pic9, filename: "cssthumb.png")
 vid9.save
 
-vid10 = Video.new(title: "Learn How to Play Like a Pro", description: "Hey guys, I came across an apprenticeship offer from Dropbox last week and got so excited I wrote a song for my application. Thought I'd share with you all to get your feedback!", user_id: user1.id)
-file10 = open("https://learn-tube-seeds.s3.us-west-1.amazonaws.com/IMG_3057.mp4")
-vid10.uploaded_video.attach(io: file10, filename: "guitar.mp4")
-pic10 = open("https://learn-tube-seeds.s3.us-west-1.amazonaws.com/Screen+Shot+2022-01-21+at+6.47.36+PM.png")
-vid10.thumbnail.attach(io: pic10, filename: "guitarthumb.png")
-vid10.save
+# vid10 = Video.new(title: "Learn How to Play Like a Pro", description: "Hey guys, I came across an apprenticeship offer from Dropbox last week and got so excited I wrote a song for my application. Thought I'd share with you all to get your feedback!", user_id: user1.id)
+# file10 = open("https://learn-tube-seeds.s3.us-west-1.amazonaws.com/IMG_3057.mp4")
+# vid10.uploaded_video.attach(io: file10, filename: "guitar.mp4")
+# pic10 = open("https://learn-tube-seeds.s3.us-west-1.amazonaws.com/Screen+Shot+2022-01-21+at+6.47.36+PM.png")
+# vid10.thumbnail.attach(io: pic10, filename: "guitarthumb.png")
+# vid10.save
 
 # Comments
 com1 = Comment.create!(body: "Thanks for sharing your secrets!", user_id: user4.id, video_id: vid2.id)
