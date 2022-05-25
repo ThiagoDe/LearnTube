@@ -18,7 +18,6 @@ LearnTube is an online video sharing and social media platform that provides con
 ![My First Board](https://user-images.githubusercontent.com/89544506/169633131-68c84704-2285-4d10-a098-72332061207c.jpg)
 
 
-
 # Features
 
 * ## User account creation and login
@@ -98,3 +97,4 @@ When the users are logged in they are allowed to like or dislike videos and also
             .then(comments => dispatch(receiveAllComments(comments)))
     )
 ```
+
