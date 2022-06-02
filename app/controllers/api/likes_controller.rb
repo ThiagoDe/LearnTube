@@ -19,7 +19,6 @@ class Api::LikesController < ApplicationController
         end
     end    
 
-    #not sure how to implement update and destroy
 
     def update ##
         # like = Like.find_by(id: params[:id]);
