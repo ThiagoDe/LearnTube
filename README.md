@@ -104,14 +104,3 @@ Pich full presentation: https://pitch.com/public/0338d002-04bf-41a8-9bcf-77c2b9b
 
 
 
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-<foreignObject width="100" height="100">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-        <ul>
-            <li>text</li>
-        </ul>
-        <!-- Other embed HTML element/text into SVG -->
-        <iframe src="https://pitch.com/embed/0338d002-04bf-41a8-9bcf-77c2b9b95751" allow="fullscreen" allowfullscreen="" width="560" height="368"       style="border:0"></iframe>                                   
-    </div>
-</foreignObject>
-</svg>
