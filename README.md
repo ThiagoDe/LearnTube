@@ -97,7 +97,7 @@ When the users are logged in they are allowed to like or dislike videos and also
             .then(comments => dispatch(receiveAllComments(comments)))
     )
 ```
-https://pitch.com/public/0338d002-04bf-41a8-9bcf-77c2b9b95751
+Pich full presentation: https://pitch.com/public/0338d002-04bf-41a8-9bcf-77c2b9b95751
 
 
 [LearnTube Presentation.pdf](https://github.com/ThiagoDe/LearnTube/files/8856055/LearnTube.Presentation.pdf)
