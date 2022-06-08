@@ -14,9 +14,7 @@ LearnTube is an online video sharing and social media platform that provides con
 * JavaScript / AJAX / JBuilder
 * HTML5 / CSS
 
-
 ![My First Board](https://user-images.githubusercontent.com/89544506/169633131-68c84704-2285-4d10-a098-72332061207c.jpg)
-
 
 # Features
 
