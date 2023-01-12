@@ -6,6 +6,9 @@
 
 LearnTube is an online video sharing and social media platform that provides content, tutorials, courses, and material for learning lovers!
 
+Quick walkthrough video: https://youtu.be/rmTU1N-z_nw
+Live site: https://learn-tube.herokuapp.com
+
 # Technologies:
 
 * Ruby on Rails
